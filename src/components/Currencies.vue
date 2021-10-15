@@ -169,11 +169,15 @@
       <option value="ZMK">Zambian Kwacha</option>
     </select>
 
-    <input type="number" name="input-one" id="input-one" v-model="amountOne" @change="fetchData"/>
+    <input type="number"
+    name="input-one"
+    id="input-one" 
+    v-model="amountOne" 
+    @change="fetchData()"/>
   </div>
 
   <div class="container-2">
-    <button>Switch</button>
+    <button @click="switchDatas()">Switch</button>
     <h4 id="baseValue"> 1 {{currency_one}} = {{rates}} {{currency_two}} </h4>
   </div>
 
@@ -379,10 +383,18 @@ export default {
           this.amountTwo = this.amountOne*this.rates.toFixed(4);
         });
     },
+
+    switchDatas(){
+      const temp = this.currency_one;
+      this.currency_one = this.currency_two;
+      this.currency_two = temp;
+      this.fetchData();
+    }
   },
 
   mounted() {
     this.fetchData();
+
   },
 };
 // usd-api = https://v6.exchangerate-api.com/v6/9809b1cec3fb53ce2b3f3f6a/latest/USD
