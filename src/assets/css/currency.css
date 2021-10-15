@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container-1 {
+  background-color: #bbb;
+  height: 4rem;
+  width: 50%;
+  margin: auto;
+  /* display: flex; */
+}
+
+.container-1 input {
+  height: 2rem;
+  margin-top: 15px;
+}
+
+#first-currency {
+  height: 2rem;
+  margin-top: 15px;
+  margin-right: 30px;
+}
+
+.container-2 {
+  height: 4rem;
+  margin: 2rem 0;
+}
+
+.container-2 button {
+  width: 180px;
+  height: 31px;
+  background-color: #5bf;
+  border-radius: 15px;
+  border: none;
+  margin-top: 2rem;
+  /* margin-bottom: 2rem; */
+}
+
+.container-3 {
+  height: 4rem;
+  margin-top: 5rem;
+  background-color: #9a9;
+  width: 50%;
+  margin: auto;
+}
+
+.container-2 input {
+  height: 2rem;
+  margin-top: 15px;
+}
+
+#second-currency {
+  height: 2rem;
+  margin-top: 15px;
+  margin-right: 30px;
+}
+

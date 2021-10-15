@@ -169,16 +169,20 @@
       <option value="ZMK">Zambian Kwacha</option>
     </select>
 
-    <input type="number"
-    name="input-one"
-    id="input-one" 
-    v-model="amountOne" 
-    @change="fetchData()"/>
+    <input
+      type="number"
+      name="input-one"
+      id="input-one"
+      v-model="amountOne"
+      @change="fetchData()"
+    />
   </div>
 
   <div class="container-2">
     <button @click="switchDatas()">Switch</button>
-    <h4 id="baseValue"> 1 {{currency_one}} = {{rates}} {{currency_two}} </h4>
+    <h4 id="baseValue">
+      1 {{ currency_one }} = {{ rates }} {{ currency_two }}
+    </h4>
   </div>
 
   <div class="container-3">
@@ -349,7 +353,13 @@
       <option value="YER">Yemeni Rial</option>
       <option value="ZMK">Zambian Kwacha</option>
     </select>
-    <input type="number" id="amount-two" placeholder="0" disabled v-model="amountTwo" />
+    <input
+      type="number"
+      id="amount-two"
+      placeholder="0"
+      disabled
+      v-model="amountTwo"
+    />
   </div>
 
   <div class="container-four">
@@ -380,22 +390,25 @@ export default {
           console.log(data);
           this.data = data;
           this.rates = data.conversion_rates[this.currency_two];
-          this.amountTwo = this.amountOne*this.rates.toFixed(4);
+          this.amountTwo = this.amountOne * this.rates.toFixed(4);
         });
     },
 
-    switchDatas(){
+    switchDatas() {
       const temp = this.currency_one;
       this.currency_one = this.currency_two;
       this.currency_two = temp;
       this.fetchData();
-    }
+    },
   },
 
   mounted() {
     this.fetchData();
-
   },
 };
 // usd-api = https://v6.exchangerate-api.com/v6/9809b1cec3fb53ce2b3f3f6a/latest/USD
 </script>
+
+<style scoped>
+@import "../assets/css/currency.css";
+</style>
