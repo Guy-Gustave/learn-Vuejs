@@ -34,7 +34,7 @@
   background-color: #5bf;
   border-radius: 15px;
   border: none;
-  margin-top: 2rem;
+  margin-top: 1rem;
   /* margin-bottom: 2rem; */
 }
 
@@ -57,3 +57,6 @@
   margin-right: 30px;
 }
 
+h4 {
+  padding: 1rem 0;
+}

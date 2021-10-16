@@ -19,6 +19,8 @@ export default {
 
 <style>
   .about {
-    background-color: #aaa;
+    background-color: #eff;
+    width: 80%;
+    margin: auto;
   }
 </style>
