@@ -375,7 +375,7 @@ export default {
       currency_one: "USD",
       currency_two: "EUR",
       rates: "",
-      amountOne: 1,
+      amountOne: 0,
       amountTwo: 0,
     };
   },

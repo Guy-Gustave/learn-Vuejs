@@ -18,9 +18,9 @@ export default {
 </script>
 
 <style>
-  .about {
-    background-color: #eff;
-    width: 80%;
-    margin: auto;
-  }
+.about {
+  background-color: #eff;
+  width: 80%;
+  margin: auto;
+}
 </style>
